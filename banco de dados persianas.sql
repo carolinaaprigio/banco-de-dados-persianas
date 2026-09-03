@@ -1,5 +1,12 @@
 USE persianas;
 
+CREATE TABLE usuarios (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    nivel_acesso VARCHAR(20) NOT NULL DEFAULT 'usuario',
+    ativo BOOLEAN NOT NULL DEFAULT TRUE
+);
 CREATE TABLE clientes (
     id_cliente VARCHAR(10) PRIMARY KEY,
     nome VARCHAR(150) NOT NULL,
